@@ -5,7 +5,6 @@ import sys
 def main():
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
-    print("You have 5 chances to guess the correct number.")
 
     number = random.randrange(1, 100, 1)
 
@@ -27,12 +26,15 @@ def main():
         case 1:
             chances = 10
             print("Great! You have selected the Easy difficulty level.")
+            print("You have 10 chances to guess the correct number.")
         case 2:
             chances = 5
             print("Great! You have selected the Medium difficulty level.")
+            print("You have 5 chances to guess the correct number.")
         case 3:
             chances = 3
             print("Great! You have selected the Hard difficulty level.")
+            print("You have 3 chances to guess the correct number.")
         case _:
             print("something went wrong")
 
