@@ -37,10 +37,25 @@ def main():
         case _:
             print("something went wrong")
 
-    try:
-        user_guess = int(input("Enter your guess: "))
-    except ValueError:
-        print("Enter a valid integer")
+    attempts = 0
+
+    while True:
+        attempts += 1
+
+        try:
+            user_guess = int(input("Enter your guess: "))
+        except ValueError:
+            print("Enter a valid integer")
+
+        if user_guess < number:
+            print(f"Incorrect! The number is greater than {user_guess}.")
+        elif user_guess > number:
+            print(f"Incorrect! The number is less than {user_guess}.")
+        else:
+            print(
+                f"Congratulations! You guessed the correct number in {attempts} attempts."
+            )
+            break
 
 
 if __name__ == "__main__":
