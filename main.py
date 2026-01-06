@@ -8,7 +8,6 @@ def main():
     print("You have 5 chances to guess the correct number.")
 
     number = random.randrange(1, 100, 1)
-    print(number)
 
     print("Please select the difficulty level:")
     print("1. Easy (10 chances)")
