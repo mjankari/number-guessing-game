@@ -37,6 +37,11 @@ def main():
         case _:
             print("something went wrong")
 
+    try:
+        user_guess = int(input("Enter your guess: "))
+    except ValueError:
+        print("Enter a valid integer")
+
 
 if __name__ == "__main__":
     sys.exit(main())
