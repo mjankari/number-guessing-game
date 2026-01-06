@@ -6,7 +6,7 @@ def main():
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
 
-    number = random.randrange(1, 100, 1)
+    number = random.randint(1, 100)
 
     print("Please select the difficulty level:")
     print("1. Easy (10 chances)")
