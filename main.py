@@ -13,12 +13,12 @@ def main():
     print("2. Medium (5 chances)")
     print("3. Hard (3 chances)")
 
-    difficulty_level = 0
-
-    try:
-        difficulty_level = int(input("Enter your choice: "))
-    except ValueError:
-        print("Please enter a valid integer.")
+    while True:
+        try:
+            difficulty_level = int(input("Enter your choice: "))
+            break
+        except ValueError:
+            print("Please enter a valid integer.")
 
     chances = 10
 
