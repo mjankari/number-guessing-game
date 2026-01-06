@@ -41,6 +41,10 @@ def main():
     while True:
         attempts += 1
 
+        if attempts > chances:
+            print("Condolences. You did not guess the correct number.")
+            break
+
         try:
             user_guess = int(input("Enter your guess: "))
         except ValueError:
