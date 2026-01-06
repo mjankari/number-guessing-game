@@ -47,10 +47,15 @@ def main():
             print("Condolences. You did not guess the correct number.")
             break
 
-        try:
-            user_guess = int(input("Enter your guess: "))
-        except ValueError:
-            print("Enter a valid integer")
+        while True:
+            try:
+                user_guess = int(input("Enter your guess: "))
+                if 1 <= user_guess <= 100:
+                    break
+                else:
+                    print("Number must be between 1 and 100.")
+            except ValueError:
+                print("Enter a valid integer")
 
         if user_guess < number:
             print(f"Incorrect! The number is greater than {user_guess}.")
